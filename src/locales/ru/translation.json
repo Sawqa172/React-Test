@@ -1,0 +1,290 @@
+{
+  "system": {
+    "navigation": {
+      "pages": {
+        "home": "Главная",
+        "onBoarding": "On Boarding",
+        "about": "О проекте",
+        "faq": "FAQ'S"
+      }
+    },
+    "footer": {},
+    "validation": {
+      "required": "Поле обязательное",
+      "invalid": "Данные некорректные",
+      "minLength": "Минимальное количество символов - ",
+      "maxLength": "Максимальное количество символов - ",
+      "isEmail": "Некорректный email",
+      "isNumeric": "Некорректное число"
+    }
+  },
+  "components": {},
+  "containers": {
+    "login": {
+      "seo": {
+        "title": "Авторизация ",
+        "description": "Emotional Fit авторизация"
+      },
+      "title": "Авторизация",
+      "form": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Введите ваш e-mail",
+          "rules": {
+            "required": "Пожалуйста, введите ваш E-mail!"
+          }
+        },
+        "password": {
+          "label": "Пароль",
+          "placeholder": "Пароль",
+          "rules": {
+            "required": "Пожалуйста, введите ваш Пароль!"
+          }
+        }
+      },
+      "actions": {
+        "signUpLabel": "Регистрация",
+        "forgotPasswordLabel": "Забыли пароль?",
+        "submitFormLabel": "Логин"
+      },
+      "providers": {
+        "caption": "Войти через"
+      }
+    },
+    "signUp": {
+      "seo": {
+        "title": "Регистрация",
+        "description": "Emotional Fit регистрация"
+      },
+      "title": "Зарегистрироваться",
+      "form": {
+        "firstName": {
+          "label": "Имя",
+          "placeholder": "Имя",
+          "rules": {
+            "required": "Пожалуйста, введите ваше Имя!"
+          }
+        },
+        "lastName": {
+          "label": "Фамилия",
+          "placeholder": "Фамилия (необязательно)",
+          "rules": {
+            "required": "Пожалуйста, введите вашу Фамилию!"
+          }
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Введите ваш e-mail",
+          "rules": {
+            "required": "Пожалуйста, введите ваш E-mail!"
+          }
+        },
+        "phone": {
+          "label": "Номер",
+          "placeholder": "Введите ваш Номер",
+          "rules": {
+            "required": "Пожалуйста, введите ваш Номер!"
+          }
+        },
+        "country": {
+          "label": "Страна",
+          "placeholder": "Выберите вашу Страну",
+          "rules": {
+            "required": "Пожалуйста, выберите вашу Страну!"
+          }
+        },
+        "city": {
+          "label": "Город",
+          "placeholder": "Город",
+          "rules": {
+            "required": "Пожалуйста, выберите ваш Город!"
+          }
+        },
+        "password": {
+          "label": "Пароль",
+          "placeholder": "Пароль",
+          "rules": {
+            "required": "Пожалуйста, введите ваш Пароль!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Уже есть аккаунт?",
+          "button": "Авторизоваться"
+        },
+        "submitFormLabel": "Зарегистрироваться"
+      }
+    },
+    "restorePassword": {
+      "seo": {
+        "title": "Восстановить пароль",
+        "description": "Emotional Fit восстановить пароль"
+      },
+      "title": "Восстановить пароль",
+      "form": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Введите ваш e-mail",
+          "rules": {
+            "required": "Пожалуйста, введите ваш E-mail!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Уже есть аккаунт?",
+          "button": "Авторизоваться"
+        },
+        "submitFormLabel": "Сбросить пароль"
+      }
+    },
+    "resetPassword": {
+      "seo": {
+        "title": "Сброс пароля",
+        "description": "Emotional Fit сброс пароляe"
+      },
+      "title": {
+        "reset": "Сброс пароля",
+        "migration": "Обновление пароля"
+      },
+      "form": {
+        "password": {
+          "label": "Пароль",
+          "placeholder": "Введите новый пароль",
+          "rules": {
+            "required": "Пожалуйста, введите новый пароль!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Уже есть аккаунт?",
+          "button": "Авторизоваться"
+        },
+        "submit": {
+          "restore": "Восстановить пароль",
+          "update": "Обновить пароль"
+        }
+      }
+    },
+    "profile": {
+      "seo": {
+        "title": "Профиль",
+        "description": "Профиль"
+      },
+      "caption": "Личная информация",
+      "info": {
+        "fullName": "Имя Фамилия",
+        "phone": "Номер телефона",
+        "email": "Email",
+        "country": "Страна",
+        "city": "Город",
+        "aboutMe": "О себе",
+        "socials": "Соц. сети"
+      },
+      "actions": {
+        "editProfile": "Редактировать профиль",
+        "editPassword": "Изменить пароль"
+      }
+    },
+    "profileEdit": {
+      "seo": {
+        "title": "Редактирование профиля",
+        "description": "Редактирование профил"
+      },
+      "info": {
+        "profile": {
+          "caption": "Профиль",
+          "fields": {
+            "avatar": {
+              "label": "Загрузить аватар",
+              "placeholder": "Загрузить",
+              "tips": {
+                "size": "Размер файла: 5Mb",
+                "extension": "Расширения: *.jpg, *.png, *.gif"
+              }
+            },
+            "firstName": "Имя",
+            "lastName": "Фамилия",
+            "phone": "Номер телефона",
+            "email": "Email",
+            "country": "Страна",
+            "city": "Город",
+            "aboutMe": "О себе "
+          }
+        },
+        "socials": {
+          "caption": "Соц. сети",
+          "fields": {
+            "facebook": "Facebook",
+            "linkedin": "LinkedIn",
+            "google": "Google",
+            "instagram": "Instagram"
+          },
+          "actions": {
+            "save": "Сохранить"
+          }
+        },
+        "actions": {
+          "save": "Сохранить"
+        }
+      },
+      "password": {
+        "caption": "Пароль",
+        "fields": {
+          "password": "Пароль",
+          "passwordConfirmation": "Повторить пароль"
+        },
+        "actions": {
+          "save": "Сохранить"
+        },
+        "messages": {
+          "success": "Пароль успешно обновлен"
+        }
+      }
+    },
+    "home": {
+      "seo": {
+        "title": "Home",
+        "description": "Home"
+      }
+    },
+    "onBoarding": {
+      "seo": {
+        "title": "OnBoarding",
+        "description": "OnBoarding"
+      }
+    },
+    "about": {
+      "seo": {
+        "title": "About",
+        "description": "About"
+      }
+    },
+    "test": {
+      "seo": {
+        "title": "Entrance Test",
+        "description": "Entrance Test"
+      }
+    },
+    "faq": {
+      "seo": {
+        "title": "FAQ",
+        "description": "FAQ"
+      }
+    },
+    "privacyPolice": {
+      "seo": {
+        "title": "Privacy Police",
+        "description": "Privacy Police"
+      }
+    },
+    "termsOfService": {
+      "seo": {
+        "title": "Terms Of Service",
+        "description": "Terms Of Service"
+      }
+    }
+  }
+}

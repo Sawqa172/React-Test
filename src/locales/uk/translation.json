@@ -1,0 +1,296 @@
+{
+  "system": {
+    "navigation": {
+      "pages": {
+        "home": "Головна",
+        "onBoarding": "Як це працює",
+        "about": "Про проект",
+        "faq": "FAQ'S"
+      }
+    },
+    "footer": {},
+    "validation": {
+      "required": "Поле обов'язкове",
+      "invalid": "Дані некоректні",
+      "minLength": "Мінімальна кількість символів - ",
+      "maxLength": "Максимальна кількість символів - ",
+      "isEmail": "Некоректний email",
+      "isNumeric": "Некоректне число"
+    }
+  },
+  "components": {},
+  "containers": {
+    "login": {
+      "seo": {
+        "title": "Авторизація",
+        "description": "Emotional Fit авторизація"
+      },
+      "title": "Авторизація",
+      "form": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Введіть ваш e-mail",
+          "rules": {
+            "required": "Будь ласка, введіть ваш E-mail!"
+          }
+        },
+        "password": {
+          "label": "Пароль",
+          "placeholder": "Пароль",
+          "rules": {
+            "required": "Будь ласка, введіть ваш Пароль!"
+          }
+        }
+      },
+      "actions": {
+        "signUpLabel": "Реєстрація",
+        "forgotPasswordLabel": "Забули пароль?",
+        "submitFormLabel": "Логін"
+      },
+      "providers": {
+        "caption": "Ввійти через"
+      }
+    },
+    "signUp": {
+      "seo": {
+        "title": "Реєстрація",
+        "description": "Emotional Fit реєстрація"
+      },
+      "title": "Зареєструватись",
+      "form": {
+        "firstName": {
+          "label": "Ім'я",
+          "placeholder": "Ім'я",
+          "rules": {
+            "required": "Будь ласка, введіть ваше Ім'я!"
+          }
+        },
+        "lastName": {
+          "label": "Прізвище",
+          "placeholder": "Прізвище (необов'язково)",
+          "rules": {
+            "required": "Будь ласка, введіть ваше Прізвище!"
+          }
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Введіть ваше e-mail",
+          "rules": {
+            "required": "Будь ласка, введіть ваше E-mail!"
+          }
+        },
+        "phone": {
+          "label": "Номер",
+          "placeholder": "Введіть ваш Номер",
+          "rules": {
+            "required": "Будь ласка, введіть ваше Номер!"
+          }
+        },
+        "country": {
+          "label": "Країна",
+          "placeholder": "Виберіть вашу Країну",
+          "rules": {
+            "required": "Будь ласка, виберіть вашу Країну!"
+          }
+        },
+        "city": {
+          "label": "Місто",
+          "placeholder": "Місто",
+          "rules": {
+            "required": "Будь ласка, виберіть ваше Місто!"
+          }
+        },
+        "password": {
+          "label": "Пароль",
+          "placeholder": "Пароль",
+          "rules": {
+            "required": "Будь ласка, виберіть ваш Пароль!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Вже маєте акаунт?",
+          "button": "Авторизуватись"
+        },
+        "submitFormLabel": "Зареєструватись"
+      }
+    },
+    "restorePassword": {
+      "seo": {
+        "title": "Відновити пароль",
+        "description": "Emotional Fit відновити пароль"
+      },
+      "title": "Відновити пароль",
+      "form": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Введіть ваш e-mail",
+          "rules": {
+            "required": "Будь ласка, введіть ваш E-mail!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Вже маєте акаунт?",
+          "button": "Авторизуватись"
+        },
+        "submitFormLabel": "Зкинути пароль"
+      }
+    },
+    "resetPassword": {
+      "seo": {
+        "title": "Скинути пароль",
+        "description": "Emotional Fit скинути пароль"
+      },
+      "title": {
+        "reset": "Скинути пароль",
+        "migration": "Оновити пароль"
+      },
+      "form": {
+        "password": {
+          "label": "Пароль",
+          "placeholder": "Введіть новий пароль",
+          "rules": {
+            "required": "Будь ласка, введіть новий пароль!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Вже маєте акаунт?",
+          "button": "Авторизуватись"
+        },
+        "submit": {
+          "restore": "Відновити пароль",
+          "update": "Оновити пароль"
+        }
+      }
+    },
+    "help": {
+      "seo": {
+        "title": "Допомога",
+        "description": "Допомога"
+      }
+    },
+    "profile": {
+      "seo": {
+        "title": "Профіль",
+        "description": "Профіль"
+      },
+      "caption": "Особиста інформація",
+      "info": {
+        "fullName": "Ім`я Прізвище",
+        "phone": "Номер телефону",
+        "email": "Email",
+        "country": "Країна",
+        "city": "Місто",
+        "aboutMe": "Про себе",
+        "socials": "Соц. мережі"
+      },
+      "actions": {
+        "editProfile": "Редагувати профіль",
+        "editPassword": "Змінити пароль"
+      }
+    },
+    "profileEdit": {
+      "seo": {
+        "title": "Редагування профілю",
+        "description": "Редагування профілю"
+      },
+      "info": {
+        "profile": {
+          "caption": "Профіль",
+          "fields": {
+            "avatar": {
+              "label": "Завантажити аватар",
+              "placeholder": "Завантажити",
+              "tips": {
+                "size": "Розмір файлу: 5Mb",
+                "extension": "Розширення: *.jpg, *.png, *.gif"
+              }
+            },
+            "firstName": "Ім`я",
+            "lastName": "Прізвище",
+            "phone": "Номер телефону",
+            "email": "Email",
+            "country": "Країна",
+            "city": "Місто",
+            "aboutMe": "Про себе"
+          }
+        },
+        "socials": {
+          "caption": "Соц. мережі",
+          "fields": {
+            "facebook": "Facebook",
+            "linkedin": "LinkedIn",
+            "google": "Google",
+            "instagram": "Instagram"
+          },
+          "actions": {
+            "save": "Зберегти"
+          }
+        },
+        "actions": {
+          "save": "Зберегти"
+        }
+      },
+      "password": {
+        "caption": "Пароль",
+        "fields": {
+          "password": "Пароль",
+          "passwordConfirmation": "Повторити пароль"
+        },
+        "actions": {
+          "save": "Зберегти"
+        },
+        "messages": {
+          "success": "Пароль успішно оновлений"
+        }
+      }
+    },
+    "home": {
+      "seo": {
+        "title": "Головна",
+        "description": "Home"
+      }
+    },
+    "onBoarding": {
+      "seo": {
+        "title": "Як це працює",
+        "description": "Як це працює"
+      }
+    },
+    "about": {
+      "seo": {
+        "title": "Про проект",
+        "description": "About"
+      }
+    },
+    "test": {
+      "seo": {
+        "title": "Тестування",
+        "description": "Тестування"
+      }
+    },
+    "faq": {
+      "seo": {
+        "title": "FAQ",
+        "description": "FAQ"
+      }
+    },
+    "privacyPolice": {
+      "seo": {
+        "title": "Privacy Police",
+        "description": "Privacy Police"
+      }
+    },
+    "termsOfService": {
+      "seo": {
+        "title": "Terms Of Service",
+        "description": "Terms Of Service"
+      }
+    }
+  }
+}

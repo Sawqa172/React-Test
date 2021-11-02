@@ -1,0 +1,32 @@
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+package-lock.json
+stats.json
+yarn.lock
+.pnp
+.pnp.js
+
+# misc
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea
+
+.env.local
+.env.test.local
+.env.dev.local
+.env.stage.local
+.env.master.local
+
+.eslintcache
+
+# boilerplate internals
+generated-cra-app
+.cra-template-rb
+template
+
+# pass & keys
+.ssh

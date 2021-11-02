@@ -1,0 +1,54 @@
+before_script:
+# Install yarn as outlined in (https://yarnpkg.com/lang/en/docs/install/#alternatives-stable)
+- echo insecure >> ~/.curlrc
+- curl -o- -k -L https://yarnpkg.com/install.sh | bash
+# Make available in the current terminal
+- export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+cache:
+  paths:
+    - .yarn
+
+stages:
+- build
+- deploy
+
+Build:
+  stage: build
+  environment:
+      name: $CI_COMMIT_REF_NAME
+  variables:
+    GIT_STRATEGY: clone
+  script:
+  - echo "$CI_COMMIT_REF_NAME"
+  - mv .env.$CI_COMMIT_REF_NAME .env
+  - yarn install
+  - yarn build
+  artifacts:
+    expire_in: 1 day
+    paths:
+    - build
+  only:
+  - dev
+  - stage
+  - master
+  tags:
+  - node14
+
+Deploy:
+  stage: deploy
+  environment:
+      name: $CI_COMMIT_REF_NAME
+  variables:
+    GIT_STRATEGY: clone
+  before_script:
+  - eval $(ssh-agent -s)
+  script:
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - rsync -avuz --delete --exclude=_ -e "ssh -p $SERVER_PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress $CI_PROJECT_DIR/build/ $DEPLOY_USER@$SERVER_IP:$DEPLOY_DIR
+  only:
+  - dev
+  - stage
+  - master
+  tags:
+    - shell

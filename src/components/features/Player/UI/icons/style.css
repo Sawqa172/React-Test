@@ -1,0 +1,49 @@
+@charset "UTF-8";
+@font-face {
+  font-family: flowplayer;
+  src: url('icons.eot');
+  src: url('icons.eot#iefix') format('embedded-opentype'),
+    url('icons.ttf') format('truetype'), url('icons.woff') format('woff'),
+    url('icons.svg#icomoon') format('svg');
+}
+
+.fp-icon {
+  display: inline-block;
+}
+.fp-icon:before {
+  font-family: flowplayer;
+  font-size: 1.7em;
+}
+
+.fp-fullscreen:before {
+  content: '\e002';
+}
+
+.fp-checked:before {
+  content: '\e003';
+}
+
+.fp-embed:before {
+  content: '\e004';
+  color: #fff;
+}
+
+.fp-playbtn:before {
+  content: '\e007';
+}
+
+.fp-pausebtn:before {
+  content: '\e008';
+}
+
+.fp-volumebtn:before {
+  content: '\e00b';
+}
+
+.fp-volume-off:before {
+  content: '\e00d';
+}
+
+.fp-unload:before {
+  content: '\e00f';
+}

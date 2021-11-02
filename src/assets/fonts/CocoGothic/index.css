@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Coco Gothic Light';
+  src: url('Coco-Gothic-Light.eot');
+  src: local('Coco Gothic Light'), local('CocoGothicLight'),
+    url('Coco-Gothic-Light.eot?#iefix') format('embedded-opentype'),
+    url('Coco-Gothic-Light.woff') format('woff'),
+    url('Coco-Gothic-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Coco Gothic Regular';
+  src: url('Coco-Gothic-Regular.eot');
+  src: local('Coco Gothic Regular'), local('CocoGothicRegular'),
+    url('Coco-Gothic-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Coco-Gothic-Regular.woff') format('woff'),
+    url('Coco-Gothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Coco Gothic Bold';
+  src: url('Coco-Gothic-Bold.eot');
+  src: local('Coco Gothic Bold'), local('CocoGothicBold'),
+    url('Coco-Gothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('Coco-Gothic-Bold.woff') format('woff'),
+    url('Coco-Gothic-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Coco Gothic Heavy';
+  src: url('Coco-Gothic-Heavy.eot');
+  src: local('Coco Gothic Heavy'), local('CocoGothicHeavy'),
+    url('Coco-Gothic-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('Coco-Gothic-Heavy.woff') format('woff'),
+    url('Coco-Gothic-Heavy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

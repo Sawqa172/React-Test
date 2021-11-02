@@ -1,0 +1,290 @@
+{
+  "system": {
+    "navigation": {
+      "pages": {
+        "home": "Home",
+        "onBoarding": "On Boarding",
+        "about": "About",
+        "faq": "FAQ'S"
+      }
+    },
+    "footer": {},
+    "validation": {
+      "required": "This field is required",
+      "invalid": "This field is invalid",
+      "minLength": "The minimum number of characters is ",
+      "maxLength": "The maximum number of characters is ",
+      "isEmail": "The field should be an email",
+      "isNumeric": "The field should be a number"
+    }
+  },
+  "components": {},
+  "containers": {
+    "login": {
+      "seo": {
+        "title": "Login",
+        "description": "6 Minutes application login page"
+      },
+      "title": "Log In",
+      "form": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Enter your e-mail",
+          "rules": {
+            "required": "Please input your E-mail!"
+          }
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "rules": {
+            "required": "Please input your Password!"
+          }
+        }
+      },
+      "actions": {
+        "signUpLabel": "Registration",
+        "forgotPasswordLabel": "Forgot password",
+        "submitFormLabel": "Log In"
+      },
+      "providers": {
+        "caption": "Login via"
+      }
+    },
+    "signUp": {
+      "seo": {
+        "title": "Sign Up",
+        "description": "6 Minutes application sign up page"
+      },
+      "title": "Sign Up",
+      "form": {
+        "firstName": {
+          "label": "First name",
+          "placeholder": "First name",
+          "rules": {
+            "required": "Please input your First name!"
+          }
+        },
+        "lastName": {
+          "label": "Last name",
+          "placeholder": "Last name (optional)",
+          "rules": {
+            "required": "Please input your First name!"
+          }
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Enter your e-mail",
+          "rules": {
+            "required": "Please input your E-mail!"
+          }
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "Enter your Phone",
+          "rules": {
+            "required": "Please input your Phone!"
+          }
+        },
+        "country": {
+          "label": "Country",
+          "placeholder": "Select your Country",
+          "rules": {
+            "required": "Please select your Country!"
+          }
+        },
+        "city": {
+          "label": "City",
+          "placeholder": "City",
+          "rules": {
+            "required": "Please input your city!"
+          }
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "rules": {
+            "required": "Please input your Password!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Have an account?",
+          "button": "Login"
+        },
+        "submitFormLabel": "Sign Up"
+      }
+    },
+    "restorePassword": {
+      "seo": {
+        "title": "Restore Password",
+        "description": "6 Minutes application restore password page"
+      },
+      "title": "Restore Password",
+      "form": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Enter your e-mail",
+          "rules": {
+            "required": "Please input your E-mail!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Have an account?",
+          "button": "Login"
+        },
+        "submitFormLabel": "Reset Password"
+      }
+    },
+    "resetPassword": {
+      "seo": {
+        "title": "Reset Password",
+        "description": "6 Minutes application reset password page"
+      },
+      "title": {
+        "reset": "Reset Password",
+        "migration": "Update Password"
+      },
+      "form": {
+        "password": {
+          "label": "Password",
+          "placeholder": "Enter new password",
+          "rules": {
+            "required": "Please input your New Password!"
+          }
+        }
+      },
+      "actions": {
+        "returnToLogin": {
+          "label": "Have an account?",
+          "button": "Login"
+        },
+        "submit": {
+          "restore": "Restore Password",
+          "update": "Update Password"
+        }
+      }
+    },
+    "profile": {
+      "seo": {
+        "title": "Profile",
+        "description": "Profile Page"
+      },
+      "caption": "Personal Info",
+      "info": {
+        "fullName": "Full name",
+        "phone": "Phone",
+        "email": "Email",
+        "country": "Country",
+        "city": "City",
+        "aboutMe": "About",
+        "socials": "Socials"
+      },
+      "actions": {
+        "editProfile": "Edit profile",
+        "editPassword": "Edit password"
+      }
+    },
+    "profileEdit": {
+      "seo": {
+        "title": "Profile Edit",
+        "description": "Profile Edit Page"
+      },
+      "info": {
+        "profile": {
+          "caption": "Profile",
+          "fields": {
+            "avatar": {
+              "label": "Upload avatar",
+              "placeholder": "Upload",
+              "tips": {
+                "size": "File size: 5Mb",
+                "extension": "File extensions: *.jpg, *.png, *.gif"
+              }
+            },
+            "firstName": "First name",
+            "lastName": "Last name",
+            "phone": "Phone",
+            "email": "Email",
+            "country": "Country",
+            "city": "City",
+            "aboutMe": "About"
+          }
+        },
+        "socials": {
+          "caption": "Socials",
+          "fields": {
+            "facebook": "Facebook",
+            "linkedin": "LinkedIn",
+            "google": "Google",
+            "instagram": "Instagram"
+          },
+          "actions": {
+            "save": "Save"
+          }
+        },
+        "actions": {
+          "save": "Save"
+        }
+      },
+      "password": {
+        "caption": "Password",
+        "fields": {
+          "password": "Password",
+          "passwordConfirmation": "Repeat Password"
+        },
+        "actions": {
+          "save": "Save"
+        },
+        "messages": {
+          "success": "Password successfully updated"
+        }
+      }
+    },
+    "home": {
+      "seo": {
+        "title": "Home",
+        "description": "Home"
+      }
+    },
+    "onBoarding": {
+      "seo": {
+        "title": "OnBoarding",
+        "description": "OnBoarding"
+      }
+    },
+    "about": {
+      "seo": {
+        "title": "About",
+        "description": "About"
+      }
+    },
+    "test": {
+      "seo": {
+        "title": "Entrance Test",
+        "description": "Entrance Test"
+      }
+    },
+    "faq": {
+      "seo": {
+        "title": "FAQ",
+        "description": "FAQ"
+      }
+    },
+    "privacyPolice": {
+      "seo": {
+        "title": "Privacy Police",
+        "description": "Privacy Police"
+      }
+    },
+    "termsOfService": {
+      "seo": {
+        "title": "Terms Of Service",
+        "description": "Terms Of Service"
+      }
+    }
+  }
+}
