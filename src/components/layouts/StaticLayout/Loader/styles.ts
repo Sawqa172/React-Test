@@ -26,11 +26,13 @@ const Container = styled.div`
     }
   }
 `;
-const Image = styled.img`
+const Item = styled.div`
   width: 50px;
   height: 50px;
   animation: loader-10-2 2s infinite ease-in-out;
   position: absolute;
+  background-color: aqua;
+  border-radius: 50%;
   &:nth-child(1) {
     top: 0;
     left: 50%;
@@ -52,4 +54,4 @@ const Image = styled.img`
   }
 `;
 
-export { Wrapper, Container, Image };
+export { Wrapper, Container, Item };

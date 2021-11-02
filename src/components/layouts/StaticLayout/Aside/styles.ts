@@ -3,7 +3,6 @@ import AsideNavigation from '../AsideNavigation';
 import AsideContacts from '../AsideContacts';
 import { WrapperProps } from './types';
 import { media } from 'styles/media';
-import AsideBg from 'assets/images/aside-bg.png';
 
 const Wrapper = styled.aside<WrapperProps>`
   position: fixed;
@@ -16,9 +15,6 @@ const Wrapper = styled.aside<WrapperProps>`
   width: 100vw;
   padding-top: ${(110 / 375) * 100}vw;
   background: ${p => p.theme.colors.mainWhite};
-  // background: ${p =>
-    p.theme.colors.mainWhite} url(${AsideBg}) bottom center /
-  //   50% auto no-repeat;
   transition: width 0.3s, transform 0.3s, opacity 0.3s, visibility 0.3s;
 
   ${media.xxsmall`

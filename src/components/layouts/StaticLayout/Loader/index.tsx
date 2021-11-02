@@ -5,14 +5,14 @@ import { Props } from './types';
 import { ColorTypes } from 'components/atoms/MainLogo/types';
 
 // styles
-import { Wrapper, Container, Image } from './styles';
+import { Wrapper, Container, Item } from './styles';
 
 export function Loader({ className }: Props) {
   return (
     <Wrapper className={className}>
       <Container>
-        <Image src={ball} />
-        <Image src={ball} />
+        <Item />
+        <Item />
       </Container>
     </Wrapper>
   );

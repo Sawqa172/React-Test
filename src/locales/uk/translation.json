@@ -3,8 +3,6 @@
     "navigation": {
       "pages": {
         "home": "Головна",
-        "onBoarding": "Як це працює",
-        "about": "Про проект",
         "faq": "FAQ'S"
       }
     },
@@ -256,40 +254,10 @@
         "description": "Home"
       }
     },
-    "onBoarding": {
-      "seo": {
-        "title": "Як це працює",
-        "description": "Як це працює"
-      }
-    },
-    "about": {
-      "seo": {
-        "title": "Про проект",
-        "description": "About"
-      }
-    },
-    "test": {
-      "seo": {
-        "title": "Тестування",
-        "description": "Тестування"
-      }
-    },
     "faq": {
       "seo": {
         "title": "FAQ",
         "description": "FAQ"
-      }
-    },
-    "privacyPolice": {
-      "seo": {
-        "title": "Privacy Police",
-        "description": "Privacy Police"
-      }
-    },
-    "termsOfService": {
-      "seo": {
-        "title": "Terms Of Service",
-        "description": "Terms Of Service"
       }
     }
   }

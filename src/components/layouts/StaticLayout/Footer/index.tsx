@@ -18,7 +18,7 @@ export function Footer({ className }: Props) {
   return (
     <Wrapper className={className}>
       <LeftSide>
-        <Logo to="/" colorType={ColorTypes.Black} />
+        <Logo to="/" />
         <Navigation />
       </LeftSide>
 

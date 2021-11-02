@@ -1,72 +1,72 @@
 export const data = [
     {
         "id": 1,
-        "slug": "pokupka",
-        "title": "Покупка",
+        "slug": "category1",
+        "title": "category1",
         "questions": [
             {
                 "id": 2,
-                "question": "Чи можу я сам оплатити доступ до EmotionFit?",
-                "answer": "Ні, EmotionFit &ndash; це корпоративний сервіс, який передбачає оформлення передплати вашим роботодавцем, у кількості не менше 50 абонементів. Якщо ви хочете займатися в EmotionFit &ndash; відправте посилання вашому HR-менеджеру або надішліть його контакти нам на пошту request@emotionfit.com, і ми зв&#39;яжемося з ними самі."
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             },
             {
                 "id": 3,
-                "question": "Якщо у мене корпоративна підписка, чи можу я підключити членів своєї родини?",
-                "answer": "Зараз такої функції немає, але ми над цим працюємо. Чекайте на це в наступних оновленнях!"
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             },
             {
                 "id": 4,
-                "question": "Чи можу я змінити тарифний план?",
-                "answer": "Так, ви можете запросити зміну тарифного плану через вашого HR. Зміна тарифних планів відбувається 1 раз на місяць &ndash; кожне 1 число місяця."
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             }
         ]
     },
     {
         "id": 2,
-        "slug": "dani",
-        "title": "Дані",
+        "slug": "category2",
+        "title": "category2",
         "questions": [
             {
                 "id": 6,
-                "question": "Чи потраплять мої персональні дані роботодавцю?",
-                "answer": "Ні. Персональні дані ми не передаємо ні платнику послуг, ні будь-яким іншим 3-м особам (у точу числі, рекламним). EmotionFit гарантує повну конфіденційність і збереження персональних даних. Це наше безумовне й непорушне правило. Ваш роботодавець буде бачити виключно загальну неперсоніфіковану інформацію про активність використання сервісу вами й вашими колегами."
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             }
         ]
     },
     {
         "id": 3,
-        "slug": "koristuvannya",
-        "title": "Користування",
+        "slug": "category3",
+        "title": "category3",
         "questions": [
             {
                 "id": 5,
-                "question": "З чого почати?",
-                "answer": "Усе дуже просто!<br />\r\n1. Спочатку треба пройти тестування (безкоштовне) &ndash; щоб дізнатися свій архетип і ключові компоненти майбутньої персональної програми.<br />\r\n2. Далі потрібно відправити дані про EmotionFit своїм СЕО чи HR. Або надати їх контактні дані (СЕО чи HR) нам, і ми самі зв&#39;яжемося з ними для обговорення умов підписки."
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "ncididunt ut labore et dolore!<br />\r\n1.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc  &ndash;ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc.<br />\r\n2. ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc"
             },
             {
                 "id": 7,
-                "question": "Як формується моя персональна програма?",
-                "answer": "<span style=\"font-size:12pt\"><span style=\"font-family:Montserrat,sans-serif\"><span style=\"color:#000000\">Для формування програми ми використовуємо унікальну технологію iFit. В її основі &ndash; використання об&#39;єктивних і суб&#39;єктивних даних, які ми отримуємо з вашого тестування. Після тестування, програма визначає до якого архетипу ви відноситеся і формує персональну програму занять з фокусом на ті досягнення, які ви перед собою ставите.</span></span></span>"
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "ncididunt ut labore et dolore!<br />\r\n1.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc  &ndash;ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc.<br />\r\n2. ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc"
             },
             {
                 "id": 8,
-                "question": "Коли я можу користуватися сервісом EmotionFit?",
-                "answer": "<span style=\"font-size:12pt\"><span style=\"font-family:Montserrat,sans-serif\"><span style=\"color:#000000\">У будь-який час і в будь-якому місці! Ми задумували сервіс таким, щоб у вас була можливість звернення до нього цілодобово з будь-якої точки світу.</span></span></span>"
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "ncididunt ut labore et dolore!<br />\r\n1.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc  &ndash;ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc.<br />\r\n2. ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc"
             },
             {
                 "id": 9,
-                "question": "Яке обладнання буде потрібне для занять в EmotionFit?",
-                "answer": "<span style=\"font-size:12pt\"><span style=\"font-family:Montserrat,sans-serif\"><span style=\"color:#000000\">EmotionFit не прив&#39;язується до обладнання. Ми враховуємо його наявність або відсутність ще на етапі створення вашої персональної програми. Деякі питання ми уточнимо у тестуванні.</span></span></span>"
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "ncididunt ut labore et dolore!<br />\r\n1.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc  &ndash;ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc.<br />\r\n2. ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc"
             },
             {
                 "id": 10,
-                "question": "Чи можу я поєднувати іншу фізичну активність із заняттями в EmotionFit?",
-                "answer": "<span style=\"font-size:12pt\"><span style=\"font-family:Montserrat,sans-serif\"><span style=\"color:#000000\">Так, звичайно. Ми тільки порадіємо вашій фізичній активності! </span></span></span><br />\r\n<span style=\"font-size:12pt\"><span style=\"font-family:Montserrat,sans-serif\"><span style=\"color:#000000\">Програма враховує вашу додаткову активність й адаптує програму з їх урахуванням.</span></span></span>"
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             },
             {
                 "id": 11,
-                "question": "Що робити, якщо сторінка сайту або мій кабінет не відкриваються, а відео / текстовий контент не відтворюється?",
-                "answer": "<span style=\"font-size:12pt\"><span style=\"font-family:Montserrat,sans-serif\"><span style=\"color:#000000\">У такому випадку, необхідно звернутися до персонального менеджера вашої компанії. Його дані будуть надані вам в установчому листі перед стартом використання сервісу EmotionFit, разом з логіном і паролем.</span></span></span>"
+                "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "answer": "<span style=\"font-size:12pt\"><span style=\"font-family:Montserrat,sans-serif\"><span style=\"color:#000000\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span>"
             }
         ]
     }

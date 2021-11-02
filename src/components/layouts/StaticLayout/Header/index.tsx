@@ -20,7 +20,7 @@ export function Header({ isToggled, onToggle, className }: Props) {
   return (
     <Wrapper className={className + ` ${isToggled ? 'active' : ''}`}>
       <Button isToggled={isToggled} onClick={onToggle} />
-      <Logo to="/" colorType={ColorTypes.Color} />
+      <Logo to="/"/>
       <Actions />
     </Wrapper>
   );

@@ -5,6 +5,5 @@ export enum ColorTypes {
 
 export interface Props {
   to: string;
-  colorType?: ColorTypes;
   className?: string;
 }

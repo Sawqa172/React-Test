@@ -3,8 +3,6 @@
     "navigation": {
       "pages": {
         "home": "Home",
-        "onBoarding": "On Boarding",
-        "about": "About",
         "faq": "FAQ'S"
       }
     },
@@ -248,24 +246,6 @@
       "seo": {
         "title": "Home",
         "description": "Home"
-      }
-    },
-    "onBoarding": {
-      "seo": {
-        "title": "OnBoarding",
-        "description": "OnBoarding"
-      }
-    },
-    "about": {
-      "seo": {
-        "title": "About",
-        "description": "About"
-      }
-    },
-    "test": {
-      "seo": {
-        "title": "Entrance Test",
-        "description": "Entrance Test"
       }
     },
     "faq": {

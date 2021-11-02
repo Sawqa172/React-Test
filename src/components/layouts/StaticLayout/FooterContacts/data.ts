@@ -10,7 +10,7 @@ const contacts = [
     data: [],
     key: "phone",
     status: true,
-    value: "+38 097 123 45 67"
+    value: "+38 090 000 00 00"
   },
   {
     data: [],
