@@ -1,8 +1,11 @@
 import styled from 'styled-components/macro';
 import { media } from 'styles/media';
+
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Aside } from './Aside';
+
+
 
 const Wrapper = styled.div`
   position: relative;
@@ -10,6 +13,7 @@ const Wrapper = styled.div`
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-width: 310px;
   min-height: inherit;
   background-color: ${p => p.theme.colors.mainWhite};
@@ -32,6 +36,8 @@ const Content = styled.main`
   display: flex;
   flex-direction: column;
   padding-top: ${(80 / 375) * 100}vw;
+  min-height: 100vh;
+  height: auto;
 
   ${media.xxsmall`
     padding-top: 80px;
@@ -41,8 +47,13 @@ const Content = styled.main`
     padding-top: ${(158 / 1920) * 100}vw;
   `}
   ${media.large`
-    padding-top: ${158 * (1440 / 1920)}px;
+    padding-top: 140px;
   `}
+`;
+
+const ContentBody = styled.div`
+  display: flex;
+  width: 100%;
 `;
 
 const StyledFooter = styled(Footer)`
@@ -55,4 +66,6 @@ export {
   StyledAside as Aside,
   Content,
   StyledFooter as Footer,
+  ContentBody,
+
 };

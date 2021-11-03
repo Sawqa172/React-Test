@@ -7,6 +7,8 @@ const lightTheme = {
     mainGreen: '#A8ED5F',
     mainPurple: '#DBABEF',
     mainBlue: '#8FEAF9',
+    mainRed:'#ff4646',
+    fontBlack: '#333',
   },
   boxShadows: {
     layout: '0 16px 40px 0 rgba(48, 49, 51, 0.15)',
@@ -16,6 +18,11 @@ const lightTheme = {
     CocoGothicRegular: '"Coco Gothic Regular", Arial, sans-serif',
     CocoGothicBold: '"Coco Gothic Bold", Arial, sans-serif',
     CocoGothicHeavy: '"Coco Gothic Heavy", Arial, sans-serif',
+    SourceSansProSemiBold: 'SourceSansPro-Semibold',
+    SourceSansProRegular: 'SourceSansPro-Regular',
+    SourceSansProLight: 'SourceSansPro-Light',
+    SourceSansProBold: 'SourceSansPro-Bold',
+    RomanescoRegular:'Romanesco-Regular'
   },
   gradients: {
     radialBlue:
@@ -53,6 +60,8 @@ const darkTheme: Theme = {
     mainGreen: '#A8ED5F',
     mainPurple: '#DBABEF',
     mainBlue: '#8FEAF9',
+    mainRed:'#ff4646',
+    fontBlack: '#333',
   },
   boxShadows: {
     layout: '0 16px 40px 0 rgba(48, 49, 51, 0.15)',
@@ -62,6 +71,11 @@ const darkTheme: Theme = {
     CocoGothicRegular: '"Coco Gothic Regular", Arial, sans-serif',
     CocoGothicBold: '"Coco Gothic Bold", Arial, sans-serif',
     CocoGothicHeavy: '"Coco Gothic Heavy", Arial, sans-serif',
+    SourceSansProSemiBold: 'SourceSansPro-Semibold',
+    SourceSansProRegular: 'SourceSansPro-Regular',
+    SourceSansProLight: 'SourceSansPro-Light',
+    SourceSansProBold: 'SourceSansPro-Bold',
+    RomanescoRegular:'Romanesco-Regular',
   },
   gradients: {
     radialBlue:

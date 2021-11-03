@@ -3,3 +3,9 @@ export interface Props {
   onToggle: () => void;
   className?: string;
 }
+
+export interface Idata   {
+  path:string;
+  name:string;
+
+}

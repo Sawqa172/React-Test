@@ -21,6 +21,9 @@ import {
   Wrapper,
   EntrySection,
 } from './styles';
+import { CustomMainWrapper } from 'styles/custom-global-styles';
+
+
 import { Loader } from '../../../components/layouts/StaticLayout/Loader';
 
 export function Home() {
@@ -47,13 +50,16 @@ export function Home() {
 
   // render
   return (
-      <>
+    <>
       <HomeSEO />
       {loading &&
-        ReactDOM.createPortal(<Loader />, document.getElementById('loader')!)}
-        <Wrapper>
+      ReactDOM.createPortal(<Loader />, document.getElementById('loader')!)}
+      <Wrapper>
+        <CustomMainWrapper>
           <EntrySection />
-        </Wrapper>
-      </>
+
+        </CustomMainWrapper>
+      </Wrapper>
+    </>
   );
 }

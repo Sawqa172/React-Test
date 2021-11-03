@@ -7,19 +7,11 @@ import FooterContacts from '../FooterContacts';
 const Wrapper = styled.footer`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px;
 
-  ${media.medium`
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: ${(80 / 1920) * 100}vw ${(110 / 1920) * 100}vw;
-  `}
+  //padding: 20px;
+  background-color: #000;
+  min-height: 240px;
 
-  ${media.large`
-    padding: ${80 * (1440 / 1920)}px ${110 * (1440 / 1920)}px;
-  `}
 `;
 
 const LeftSide = styled.div`
@@ -35,25 +27,6 @@ const LeftSide = styled.div`
   `}
 `;
 
-const Logo = styled(MainLogo)`
-  width: ${(129 / 375) * 100}vw;
-  margin-bottom: ${(20 / 375) * 100}vw;
-
-  ${media.xxsmall`
-    width: 129px;
-    margin-bottom: 20px;
-  `}
-
-  ${media.medium`
-    flex: 0 0 auto;
-    margin-bottom: 0;
-    width: ${(269 / 1920) * 100}vw;
-  `}
-
-  ${media.large`
-    width: ${269 * (1440 / 1920)}px;
-  `}
-`;
 
 const Navigation = styled(FooterNavigation)`
   ${media.medium`
@@ -81,6 +54,88 @@ const RightSide = styled.div`
   `}
 `;
 
+const FooterTop = styled.div`
+  display: flex;
+  align-items: center;
+
+  flex-grow: 1;
+  width: 100%;
+`;
+const FooterTopContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+`;
+
+const FooterTopNav = styled.nav`
+
+  display: flex;
+  a{
+    color: ${p => p.theme.colors.mainWhite};
+    font-family: ${p => p.theme.fontFamily.SourceSansProRegular};
+    font-size: 18px;
+    &:not(:last-child){
+      margin-right: 35px;
+    }
+  }
+`;
+
+
+const FooterTopSocial = styled.div`
+  display: flex;
+  a{
+    
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+    
+    svg{
+      fill:#fff;
+      transition: .3s;
+      
+    }
+  }
+`;
+
+const FooterBottom = styled.div`
+  display: flex;
+  padding: 15px 0;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, .25);
+
+`;
+
+
+const Logo = styled.a`
+  font-size: 54px;
+  color: ${p => p.theme.colors.mainWhite};
+  font-family: ${p => p.theme.fontFamily.RomanescoRegular};
+`;
+
+const Copyright = styled.small`
+  display: inline-block;
+  font-size: 14px;
+  font-family: ${p => p.theme.fontFamily.SourceSansProRegular};
+  color: #898989;
+  width: 100%;
+  text-align: center;
+`;
+
 const Contacts = styled(FooterContacts)``;
 
-export { Wrapper, LeftSide, RightSide, Logo, Navigation, Contacts };
+export {
+  Wrapper,
+  LeftSide,
+  RightSide,
+  Logo,
+  Navigation,
+  Contacts,
+  FooterTop,
+  FooterTopContent,
+  FooterTopNav,
+  FooterTopSocial,
+  FooterBottom,
+  Copyright,
+};

@@ -5,7 +5,7 @@
  * This component is the skeleton around the actual pages, and should only
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
-import { useEffect } from 'react';
+import { useEffect ,FC} from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useSelector, useDispatch } from 'react-redux';
 import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
@@ -62,6 +62,7 @@ import { ProfileIncludesTypes } from './store/modules/user/profile/types';
 // styles
 import { GlobalStyle } from 'styles/global-styles';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 // toast modal configuration
 toast.configure({
@@ -129,6 +130,21 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
 
+
+  //get Products
+//   useEffect(()=>{
+//     fetch('https://fakestoreapi.com/products')
+//   },[])
+//
+// async function fetch (url:string) {
+//     try{
+//       let response = await axios.get(url)
+//       console.log(response.data);
+//     }
+//     catch (e){
+//       alert(e)
+//     }
+// }
   // render
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -177,6 +193,9 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={StaticHome} />
           <Route path="/faq" component={StaticFaq} />
+          {/*<Route path="/home/:id" component={StaticFaq} />*/}
+
+
           {/*<Route path="/privacy-policy" component={StaticPrivacyPolicy} />*/}
           {/*<Route path="/terms-of-service" component={StaticTermsOfService} />*/}
           <Redirect to="/" />

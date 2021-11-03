@@ -16,7 +16,9 @@ import { Provider } from 'react-redux';
 import 'sanitize.css/sanitize.css';
 
 // fonts styles
-import 'assets/fonts/CocoGothic/index.css';
+// import 'assets/fonts/CocoGothic/index.css';
+import 'assets/fonts/Romanesco/index.css';
+import 'assets/fonts/SourcePro/index.css';
 
 import App from 'app';
 

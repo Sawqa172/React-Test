@@ -5,60 +5,103 @@ import MainLogo from 'components/atoms/MainLogo';
 
 const Wrapper = styled.header`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-right: 20px;
+  padding: 20px 15px 0;
   position: fixed;
   width: 100%;
   background-color: ${p => p.theme.colors.mainWhite};
+  z-index: 10;
+  
+  
+`;
+const HeaderTop = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  
+`;
+const HeaderTopInteraction = styled.div`
+  display: flex;
+  align-items: center;
 
-  ${media.medium`
-    padding: ${(45 / 1920) * 100}vw ${(110 / 1920) * 100}vw;
-  `}
+  button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 
-  ${media.large`
-    padding: ${45 * (1440 / 1920)}px ${110 * (1440 / 1920)}px;
-  `}
+  }
+`;
+
+const HeaderTopButton = styled.button`
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    svg {
+      fill: ${p => p.theme.colors.mainRed};
+    }
+  }
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  svg {
+    transition: .3s linear;
+  }
+  span{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    background-color:#000;
+    color: #fff;
+    font-size: 10px;
+    bottom: -4px;
+    right: -4px;
+  }
+  
+`;
+
+
+const HeaderBottom = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    transition: .3s linear;
+    font-family: ${p =>p.theme.fontFamily.SourceSansProRegular};
+    // &:hover{
+    //   color: ${p => p.theme.colors.mainRed};
+    // }
+    &:not(:last-child){
+      margin-right: 35px;
+    }
+  }
+  
 `;
 
 const Button = styled(ToggleButton)``;
 
-const Logo = styled(MainLogo)`
-  margin-top: -${(10 / 375) * 100}vw;
-  width: ${(200 / 375) * 100}vw;
-
-  ${media.xxsmall`
-    margin-top: -10px;
-    width: 200px;
-  `}
-
-  ${media.medium`
-    margin-top: -${(10 / 1920) * 100}vw;
-    width: ${(397 / 1920) * 100}vw;
-    height: ${(68 / 1920) * 100}vw;
-  `}
-  
-  ${media.large`
-    margin-top: -${10 * (1440 / 1920)}px;
-    width: ${397 * (1440 / 1920)}px;
-    height: ${68 * (1440 / 1920)}px;
-  `}
+const Logo = styled.a`
+  font-size: 54px;
+  color: ${p => p.theme.colors.fontBlack};
+  font-family: ${p => p.theme.fontFamily.RomanescoRegular};
 `;
 
-const Actions = styled.div`
-  display: none;
 
-  ${media.medium`
-    display: inline-block;
-    width: ${(127 / 1920) * 100}vw;
-    height: ${(60 / 1920) * 100}vw;
-  `}
-
-  ${media.large`
-    width: ${127 * (1440 / 1920)}px;
-    height: ${60 * (1440 / 1920)}px;
-  `}
-`;
-
-export { Wrapper, Button, Logo, Actions };
+export { Wrapper, Button, Logo ,HeaderTop, HeaderBottom , HeaderTopInteraction, HeaderTopButton};
