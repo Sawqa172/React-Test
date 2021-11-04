@@ -6,11 +6,14 @@ import { initialState } from './state';
 // First select the relevant part from the state
 const selectDomain = (state: RootState) => state.home || initialState;
 
-export const selectData = createSelector(
+// export const selectData = createSelector(
+//   [selectDomain],
+//   homeState => homeState.data,
+// );
+export const homeCategories = createSelector(
   [selectDomain],
-  homeState => homeState.data,
-);
-
+  homeState => homeState.data
+)
 export const selectLoading = createSelector(
   [selectDomain],
   homeState => homeState.loading,

@@ -15,6 +15,22 @@ export const selectNavigation = createSelector(
   [selectDomain],
   appState => appState.navigation,
 );
+export const selectCategories = createSelector(
+  [selectDomain],
+  appState => appState.categories.data,
+);
+export const isLoadingCategories = createSelector(
+  [selectDomain],
+  appState => appState.categories.loading,
+);
+export const selectAllProducts = createSelector(
+  [selectDomain],
+  appState => appState.allProducts.data,
+);
+export const isLoadingAllProducts = createSelector(
+  [selectDomain],
+  appState => appState.allProducts.loading,
+);
 
 export const selectFooterNavigation = createSelector([selectDomain], appState =>
   appState.navigation.filter(navItem => navItem.footerNav),

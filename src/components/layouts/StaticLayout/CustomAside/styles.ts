@@ -6,6 +6,7 @@ const Categories = styled.div`
   align-items: center;
   width: 100%;
   max-width: 225px;
+  margin-right: 30px;
   
 `;
 

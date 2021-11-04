@@ -7,3 +7,4 @@ export const initialState: HomeState = {
   done: false,
   error: null,
 };
+

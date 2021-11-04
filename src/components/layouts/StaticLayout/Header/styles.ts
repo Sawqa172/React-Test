@@ -9,7 +9,7 @@ const Wrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 20px 15px 0;
-  position: fixed;
+  position: relative;
   width: 100%;
   background-color: ${p => p.theme.colors.mainWhite};
   z-index: 10;

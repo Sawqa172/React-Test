@@ -4,35 +4,28 @@ import axios from 'axios';
 
 //styles
 import { Categories, SingleCategory } from './styles';
+import { useDispatch, useSelector } from 'react-redux';
+import { useAppSlice } from '../../../../store/modules/hook';
+import { isLoadingCategories, selectCategories } from '../../../../store/modules/selectors';
 
-
-interface IProducts{
-  category:string;
-}
 
 const CustomAside:FC = () => {
-  const [categories,setCategories] = useState<string[]>([])
+  const { actions } = useAppSlice();
 
+  const dispatch = useDispatch();
+  const categories = useSelector(selectCategories)
+  const categoriesLoading = useSelector(isLoadingCategories)
+  const requestData = () => dispatch(actions.fetchAsideCategoriesTrigger());
 
-  useEffect(()=>{
-    fetchCategories()
-    // return setCategories([''])
-  },[])
+  // on mount
+  useEffect(() => {
+    requestData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-
-  async function fetchCategories () {
-    try{
-      let response = await axios.get<string[]>('https://fakestoreapi.com/products/categories')
-       setCategories(['See all', ...response.data])
-    }
-    catch (e){
-      alert(e)
-    }
-  }
   async function clickHandler(item) {
     let data = item.getAttribute('data-category')
     let items:string[] = []
-
     try{
       if(data === 'See All'){
         let response = await axios.get<string[]>('https://fakestoreapi.com/products')
@@ -53,7 +46,8 @@ const CustomAside:FC = () => {
 
   return (
     <Categories>
-      {!categories.length ?
+
+      {categoriesLoading ?
       <span>
         Категории Загружаються
       </span>

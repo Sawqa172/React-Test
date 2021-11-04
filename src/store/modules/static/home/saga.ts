@@ -1,6 +1,9 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { actions } from './slice';
 import * as service from './services';
+import axios from 'axios';
+
+
 
 /**
  * Home request/response handler
@@ -16,6 +19,7 @@ export function* fetchDataSaga() {
     yield put(actions.fetchDataFulfilled());
   }
 }
+
 
 /**
  * Root saga manages watcher lifecycle

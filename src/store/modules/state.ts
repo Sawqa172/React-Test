@@ -1,5 +1,7 @@
 import { AppState } from './types';
 
+
+
 export const initialState: AppState = {
   token: localStorage.getItem('access_token'),
   navigation: [
@@ -22,6 +24,21 @@ export const initialState: AppState = {
     done: false,
     error: null,
   },
+
+  allProducts:{
+    data: null,
+    loading: false,
+    done: false,
+    error: null,
+  },
+  categories: {
+    data: ['See All'],
+    loading: false,
+    done: false,
+    error: null,
+  },
+
+
   utmTags: {
     utmSource: null,
     utmMedium: null,

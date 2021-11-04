@@ -2,7 +2,7 @@ import { createSlice } from 'utils/@reduxjs/toolkit';
 import { PayloadAction } from '@reduxjs/toolkit';
 
 import { initialState } from './state';
-import { FetchPayloadErrorType, FetchPayloadSuccessType } from './types';
+import { FetchPayloadErrorType,FetchPayloadSuccessType } from './types';
 
 // Creating slice with reducers
 const slice = createSlice({
@@ -27,5 +27,6 @@ const slice = createSlice({
     },
   },
 });
+
 
 export const { name, actions, reducer } = slice;

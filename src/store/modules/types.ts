@@ -1,4 +1,6 @@
 import { Home } from '../../types/models/home';
+import {IProducts} from 'types/models/products'
+
 
 /**
  * App state
@@ -10,6 +12,9 @@ export interface AppState {
   contacts: Contacts;
   utmTags: IUtmTags;
   error?: any | null;
+  allProducts:IProductsState
+  categories: ICategories,
+
 }
 
 export interface NavigationItem {
@@ -18,6 +23,7 @@ export interface NavigationItem {
   link: string;
   footerNav: boolean;
 }
+
 
 export interface Contacts {
   data: Array<ContactsItem> | null;
@@ -30,6 +36,19 @@ export interface ContactsItem {
   key: string;
   status: boolean;
   value: string;
+}
+
+export interface ICategories {
+  data: Array<string>;
+  loading: boolean;
+  done: boolean;
+  error?: unknown | null;
+}
+export interface IProductsState {
+  data: Array<IProducts> | null,
+  loading: boolean;
+  done: boolean;
+  error?: unknown | null;
 }
 
 export interface IUtmTags {

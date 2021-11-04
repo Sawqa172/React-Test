@@ -54,6 +54,7 @@ import { ProfileEdit as UserProfileEdit } from './containers/users/ProfileEdit/L
 
 import { Home as StaticHome } from './containers/static/Home/Loadable';
 import { Faq as StaticFaq } from './containers/static/Faq/Loadable';
+// import { singleProduct as StaticFaq } from './containers/static/Faq/Loadable';
 
 // types
 import { RoleTypes } from './types/models/role';
@@ -193,7 +194,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={StaticHome} />
           <Route path="/faq" component={StaticFaq} />
-          {/*<Route path="/home/:id" component={StaticFaq} />*/}
+          {/*<Route path="/home/singleProduct/:id" exact component={StaticSingleProduct} />*/}
 
 
           {/*<Route path="/privacy-policy" component={StaticPrivacyPolicy} />*/}

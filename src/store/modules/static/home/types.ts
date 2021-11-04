@@ -11,3 +11,4 @@ export interface HomeState {
 // payloads types
 export type FetchPayloadSuccessType = Home;
 export type FetchPayloadErrorType = unknown | null;
+
