@@ -15,28 +15,16 @@ const CustomAside:FC = () => {
   const dispatch = useDispatch();
   const categories = useSelector(selectCategories)
   const categoriesLoading = useSelector(isLoadingCategories)
-  const requestData = () => dispatch(actions.fetchAsideCategoriesTrigger());
 
-  // on mount
-  useEffect(() => {
-    requestData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   async function clickHandler(item) {
     let data = item.getAttribute('data-category')
-    let items:string[] = []
     try{
-      if(data === 'See All'){
-        let response = await axios.get<string[]>('https://fakestoreapi.com/products')
-        items = response.data
-        console.log(items);
+      if(data === 'See all'){
+        dispatch(actions.fetchAllProductsTrigger())
         return
       }
-      let response = await axios.get<string[]>(`https://fakestoreapi.com/products/category/${data}`)
-      items = response.data
-      console.log(items);
-      return
+      dispatch(actions.fetchCategoryAllProductsTrigger(data))
     }
     catch (e){
       alert(e)
@@ -47,12 +35,12 @@ const CustomAside:FC = () => {
   return (
     <Categories>
 
-      {categoriesLoading ?
+      {!categoriesLoading ?
       <span>
         Категории Загружаються
       </span>
       :
-        categories.map(item =>
+        categories?.map(item =>
           <SingleCategory key = {item} data-category = {item} onClick = {(e) => clickHandler(e.target)}>
           <span>
             {item}

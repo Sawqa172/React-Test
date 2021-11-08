@@ -1,5 +1,5 @@
 import { Home } from '../../types/models/home';
-import {IProducts} from 'types/models/products'
+import {IProducts , ISingleProduct} from 'types/models/products'
 
 
 /**
@@ -12,8 +12,10 @@ export interface AppState {
   contacts: Contacts;
   utmTags: IUtmTags;
   error?: any | null;
-  allProducts:IProductsState
-  categories: ICategories,
+  allProducts:IProductsState;
+  singleProduct:ISingleProductState;
+  categories: ICategories;
+  bag: IBagState;
 
 }
 
@@ -38,8 +40,9 @@ export interface ContactsItem {
   value: string;
 }
 
+
 export interface ICategories {
-  data: Array<string>;
+  data: Array<string> | null;
   loading: boolean;
   done: boolean;
   error?: unknown | null;
@@ -50,6 +53,19 @@ export interface IProductsState {
   done: boolean;
   error?: unknown | null;
 }
+export interface ISingleProductState {
+  data: ISingleProduct | null,
+  loading: boolean;
+  done: boolean;
+  error?: unknown | null;
+}
+export interface IBagState {
+  data: any | null,
+  done: boolean;
+  loading: boolean;
+  error?: unknown | null;
+
+}
 
 export interface IUtmTags {
   utmSource: string | null;
@@ -57,6 +73,14 @@ export interface IUtmTags {
   utmCampaign: string | null;
 }
 
+
 export interface AutoLoginSetSuccessPayload {
   token: string;
+}
+
+export interface FetchSingleProductTriggerPayload {
+  payload?: number;
+}
+export interface setBagTriggerPayload {
+  payload?: string;
 }

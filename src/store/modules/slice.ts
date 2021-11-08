@@ -1,8 +1,15 @@
 import { createSlice } from 'utils/@reduxjs/toolkit';
 import { initialState } from './state';
 import { PayloadAction } from '@reduxjs/toolkit';
-import { AutoLoginSetSuccessPayload, ContactsItem, IProductsState } from './types';
+import {
+  AutoLoginSetSuccessPayload,
+  ContactsItem,
+  FetchSingleProductTriggerPayload,
+  IProductsState,
+  setBagTriggerPayload,
+} from './types';
 import {IProducts} from 'types/models/products'
+import { FetchTriggerPayload } from './auth/login/types';
 
 
 const appSlice = createSlice({
@@ -52,15 +59,16 @@ const appSlice = createSlice({
     },
     fetchAsideCategoriesSuccess(state, action: PayloadAction<[]>) {
       state.categories.done = true;
-      state.categories.data = [...state.categories.data ,...action.payload];
+      state.categories.data = action.payload;
+      state.categories.data = ['See all', ...state.categories.data]
     },
     fetchAsideCategoriesFailed(state, action) {
       state.categories.error = action.payload;
     },
-    fetchAsideCategoriesFulfilled(state) {
-      state.categories.loading = false;
-      state.categories.done = false;
-    },
+    // fetchAsideCategoriesFulfilled(state) {
+    //   state.categories.loading = false;
+    //   state.categories.done = false;
+    // },
 
     //fetchAllProducts
     fetchAllProductsTrigger(state) {
@@ -75,10 +83,84 @@ const appSlice = createSlice({
     fetchAllProductsFailed(state, action) {
       state.allProducts.error = action.payload;
     },
-    fetchAllProductsFulfilled(state) {
-      state.allProducts.loading = false;
+    // fetchAllProductsFulfilled(state) {
+    //   state.allProducts.loading = false;
+    //   state.allProducts.done = false;
+    // },
+
+
+    //fetchCategoryALlProducts
+    fetchCategoryAllProductsTrigger(state,action: PayloadAction<FetchSingleProductTriggerPayload>) {
+      state.allProducts.loading = true;
       state.allProducts.done = false;
+      state.allProducts.error = null;
     },
+    fetchCategoryAllProductsSuccess(state, action) {
+      state.allProducts.done = true;
+      state.allProducts.data = action.payload;
+    },
+    fetchCategoryAllProductsFailed(state, action) {
+      state.allProducts.error = action.payload;
+    },
+
+
+    //fetchSingleProduct
+    fetchSingleProductTrigger(state, action: PayloadAction<FetchSingleProductTriggerPayload>) {
+      state.singleProduct.loading = true;
+      state.singleProduct.done = false;
+      state.singleProduct.error = null;
+    },
+    fetchSingleProductSuccess(state, action) {
+      state.singleProduct.done = true;
+      state.singleProduct.data = action.payload;
+    },
+    fetchSingleProductFailed(state, action) {
+      state.singleProduct.error = action.payload;
+    },
+    fetchSingleProductFulfilled(state) {
+      state.singleProduct.loading = false;
+      state.singleProduct.done = false;
+    },
+
+
+  //setBag
+    setBagTrigger(state, action:PayloadAction<setBagTriggerPayload>) {
+      state.bag.done = true;
+    },
+    setBagSuccess(state, action) {
+      state.bag.data = [...state.bag.data, action.payload];
+    },
+    setBagFailed(state, action) {
+      state.bag.error = action.payload;
+    },
+    setBagFulfilled(state) {
+      state.bag.loading = false;
+      state.bag.done = false;
+    },
+
+
+    //update Bag
+    updateBagTrigger(state, action:PayloadAction<string | null>) {
+      state.bag.done = true;
+    },
+    updateBagSuccess(state, action) {
+      state.bag.data = action.payload;
+    },
+    updateBagFailed(state, action) {
+      state.bag.error = action.payload;
+    },
+    updateBagFulfilled(state) {
+      state.bag.loading = false;
+      state.bag.done = false;
+    },
+
+    // fetchSingleProductFailed(state, action) {
+    //   state.singleProduct.error = action.payload;
+    // },
+    // fetchSingleProductFulfilled(state) {
+    //   state.singleProduct.loading = false;
+    //   state.singleProduct.done = false;
+    // },
 
   },
 });

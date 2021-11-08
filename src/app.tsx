@@ -34,7 +34,7 @@ import { useLogoutSlice } from './store/modules/auth/logout/hook';
 import { useProfileSlice } from './store/modules/user/profile/hook';
 
 // selectors
-import { selectIsAuthenticated } from './store/modules/selectors';
+import { selectBag, selectIsAuthenticated } from './store/modules/selectors';
 import { selectProfileData } from './store/modules/user/profile/selectors';
 
 // layouts
@@ -54,7 +54,7 @@ import { ProfileEdit as UserProfileEdit } from './containers/users/ProfileEdit/L
 
 import { Home as StaticHome } from './containers/static/Home/Loadable';
 import { Faq as StaticFaq } from './containers/static/Faq/Loadable';
-// import { singleProduct as StaticFaq } from './containers/static/Faq/Loadable';
+import { SingleProduct as StaticSingleProduct } from './containers/static/SingleProduct/Loadable';
 
 // types
 import { RoleTypes } from './types/models/role';
@@ -64,6 +64,8 @@ import { ProfileIncludesTypes } from './store/modules/user/profile/types';
 import { GlobalStyle } from 'styles/global-styles';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { type } from 'os';
+import { updateBagSaga } from './store/modules/saga';
 
 // toast modal configuration
 toast.configure({
@@ -90,6 +92,8 @@ const App = () => {
 
   // Logout slice to import logout store module
   useLogoutSlice();
+
+
 
   // hook slices
   const { actions: appActions } = useAppSlice();
@@ -132,20 +136,19 @@ const App = () => {
   }, [isAuthenticated]);
 
 
-  //get Products
-//   useEffect(()=>{
-//     fetch('https://fakestoreapi.com/products')
-//   },[])
-//
-// async function fetch (url:string) {
-//     try{
-//       let response = await axios.get(url)
-//       console.log(response.data);
-//     }
-//     catch (e){
-//       alert(e)
-//     }
-// }
+  //sync localStorage with Store
+  useEffect(()=>{
+    let localStorageBag:string | null = localStorage.getItem('bag')
+    if(localStorageBag){
+      let parsedLocalStorage = JSON.parse(localStorageBag)
+      dispatch(appActions.updateBagTrigger(parsedLocalStorage))
+
+    }
+
+  },[])
+
+
+
   // render
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -194,8 +197,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={StaticHome} />
           <Route path="/faq" component={StaticFaq} />
-          {/*<Route path="/home/singleProduct/:id" exact component={StaticSingleProduct} />*/}
-
+          <Route path="/singleProduct/:id" exact component={StaticSingleProduct} />
 
           {/*<Route path="/privacy-policy" component={StaticPrivacyPolicy} />*/}
           {/*<Route path="/terms-of-service" component={StaticTermsOfService} />*/}

@@ -6,7 +6,6 @@ import { Footer } from './Footer';
 import { Aside } from './Aside';
 
 
-
 const Wrapper = styled.div`
   position: relative;
   z-index: 0;
@@ -35,16 +34,16 @@ const Content = styled.main`
   z-index: 1;
   display: flex;
   flex-direction: column;
-  //padding-top: ${(80 / 375) * 100}vw;
+    //padding-top: ${(80 / 375) * 100}vw;
   min-height: 100vh;
   height: auto;
-  
+
 `;
 
 const ContentBody = styled.div`
   display: flex;
   width: 100%;
-  padding-top: 60px;
+  padding: 60px 0 40px;
   flex-wrap: wrap;
 `;
 
@@ -53,97 +52,152 @@ const ContentBodyGrid = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-bottom: 30px;
-  button{
+
+  button {
     width: 20px;
     height: 20px;
     padding: 0;
     margin: 0;
     border: 0;
-    background:transparent;
+    background: transparent;
     display: flex;
     flex-wrap: wrap;
-    
-    cursor:pointer;
-    &.grid_active{
+
+    cursor: pointer;
+
+    &.grid_active {
       pointer-events: none;
-      span{
+
+      span {
         border: 1px solid #8b8b8b;
 
       }
     }
-    &:hover{
-      span{
-        border: 1px solid ${ p => p.theme.colors.mainRed};
+
+    &:hover {
+      span {
+        border: 1px solid ${p => p.theme.colors.mainRed};
       }
     }
-    span{
+
+    span {
       transition: .3s linear;
       border: 1px solid #000;
       pointer-events: none;
     }
-    &.grid_one{
-      span{
+
+    &.grid_one {
+      span {
         width: 100%;
         height: 100%;
       }
-      
+
     }
-    &.grid_two{
+
+    &.grid_two {
       justify-content: space-between;
-      span{
+
+      span {
         width: 9px;
         height: 100%;
-        
+
       }
     }
-    &.grid_three{
+
+    &.grid_fourth {
       justify-content: space-between;
       align-items: stretch;
-      
-      span{
+
+      span {
         width: 9px;
         height: 9px;
-        
-        
       }
     }
-    
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-right: 20px;
     }
   }
 `;
 const ContentBodyContainer = styled.div`
-display: flex;
-  
+  display: flex;
+  width: 100%;
+
 `;
 const ContentBodyProducts = styled.div`
   flex-grow: 1;
-  background-color:#fff;
+  background-color: #fff;
   display: flex;
   flex-wrap: wrap;
+  transition: .3s linear;
+
+  &.content__body-products_fourth {
+    .content__body-products_item {
+      width: calc((100% - 60px) / 4);
+      margin-bottom: 20px;
+
+      &:not(:nth-child(4n)) {
+        margin-right: 20px;
+      }
+
+    }
+  }
+
+  &.content__body-products_two {
+    .content__body-products_item {
+      width: calc((100% - 80px) / 2);
+      margin-bottom: 30px;
+      max-width: 520px;
+      .single-product__title{
+        max-width: 450px;
+      }
+
+      &:not(:nth-child(2n)) {
+        margin-right: 20px;
+      }
+
+    }
+  }
+
+  &.content__body-products_one {
+    .content__body-products_item {
+      width: 555px;
+      max-width: 555px;
+      margin-bottom: 50px;
+      .single-product__title{
+        max-width: 450px;
+      }
+    }
+  }
+
+  span.is__loading__span {
+    text-align: center;
+    width: 100%;
+    font-family: ${p => p.theme.fontFamily.SourceSansProBold};
+  }
 `;
 const SingleProduct = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: calc((100% - 80px) / 4);
+  //width: calc((100% - 80px) / 4);
   max-width: 250px;
   height: auto;
-  margin: 0 20px 20px 0 ;
-  a{
+  //margin: 0 20px 20px 0 ;
+  a {
     text-decoration: none;
     padding: 0;
     margin: 0;
   }
-  .single-product__image{
+
+  .single-product__image {
     width: 100%;
     height: 100%;
     max-height: 355px;
     overflow: hidden;
     margin-bottom: 20px;
-    
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       max-height: 355px;
@@ -151,11 +205,12 @@ const SingleProduct = styled.div`
       transition: .3s linear;
     }
   }
-  .single-product__title{
+
+  .single-product__title {
     transition: .3s linear;
     color: ${p => p.theme.colors.fontBlack};
     font-size: 18px;
-    font-family: ${p =>p.theme.fontFamily.SourceSansProRegular};
+    font-family: ${p => p.theme.fontFamily.SourceSansProRegular};
     margin: 0 0 20px 0;
     line-height: 20px;
     max-width: 200px;
@@ -166,41 +221,45 @@ const SingleProduct = styled.div`
     max-height: 43px;
     min-height: 40px;
     flex: 1 1 100%;
-    &:hover{
+
+    &:hover {
       color: ${p => p.theme.colors.mainRed};
     }
-    
+
   }
-  .single-product__price{
+
+  .single-product__price {
     margin: 0;
     transition: .3s linear;
     color: ${p => p.theme.colors.fontBlack};
     font-size: 18px;
-    font-family: ${p =>p.theme.fontFamily.SourceSansProRegular};
+    font-family: ${p => p.theme.fontFamily.SourceSansProRegular};
   }
-  .single-product__like{
+
+  .single-product__like {
     position: absolute;
     bottom: 60px;
     right: 0;
     padding: 0;
-    background:transparent;
+    background: transparent;
     margin: 0;
     border: none;
     transition: .3s linear;
     width: 20px;
     height: 20px;
-    cursor:pointer;
+    cursor: pointer;
     z-index: 2;
-    
-    &:hover svg{
-      fill:${p => p.theme.colors.mainRed};
+
+    &:hover svg {
+      fill: ${p => p.theme.colors.mainRed};
     }
-    svg{
+
+    svg {
       transition: .3s linear;
-      fill:#000;
+      fill: #000;
     }
   }
-  
+
 
 `;
 

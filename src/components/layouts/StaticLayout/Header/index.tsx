@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 //store
-import { selectIsAuthenticated } from 'store/modules/selectors';
+import { selectBag, selectIsAuthenticated } from 'store/modules/selectors';
 
 // types
 import { Props } from './types';
@@ -12,7 +12,7 @@ import { ColorTypes } from 'components/atoms/MainLogo/types';
 import { data } from './data';
 
 //atom component
-import {Link} from '../../../../components/atoms/Link/index'
+import { Link } from '../../../../components/atoms/Link/index';
 
 // styles
 import { Button, Logo, Wrapper, HeaderTop, HeaderBottom, HeaderTopInteraction, HeaderTopButton } from './styles';
@@ -25,10 +25,14 @@ import LikesIcon from '../../../icons/Likes';
 import BagIcon from '../../../icons/Bag';
 
 export function Header({ isToggled, onToggle, className }: Props) {
-  // slice hook
 
+  let [isOpenBag, setIsOpenBag] = useState<boolean>(false);
   // selectors
   const isAuthenticated = useSelector(selectIsAuthenticated);
+
+  let bag = useSelector(selectBag);
+
+
 
   return (
     <Wrapper>
@@ -40,35 +44,62 @@ export function Header({ isToggled, onToggle, className }: Props) {
           <Logo>
             Shop
           </Logo>
-          <HeaderTopInteraction>
+          <HeaderTopInteraction className={isOpenBag ? 'header__bag_opened' : ''}>
             <HeaderTopButton>
               <LoginIcon />
             </HeaderTopButton>
             <HeaderTopButton>
               <LikesIcon />
-              <span>
+              <span className={'header__quantity'}>
                 0
               </span>
             </HeaderTopButton>
-            <HeaderTopButton>
+            <HeaderTopButton
+
+              onClick={() => setIsOpenBag(!isOpenBag)}
+            >
               <BagIcon />
-              <span>
-                0
+              <span className={'header__quantity'}>
+                {bag.length
+                  ?
+                  bag.length
+                  :
+                  '0'
+                }
               </span>
+
             </HeaderTopButton>
+            {bag.length
+              ?
+              <div className={'header__bag-container'}>
+                {bag && bag.map((item, index) =>
+
+                  <span key={index} className={'header__bag-container__name'}>
+                     {index + 1}. {item}
+                  </span>,
+                )}
+              </div>
+              :
+              <div className={'header__bag-container'}>
+                <span>
+                Нема нічого в корзині
+              </span>
+              </div>
+
+            }
 
           </HeaderTopInteraction>
         </HeaderTop>
-          <HeaderBottom>
-            {data.map(item =>
-              <Link
-                key={item.path}
-                to={item.path}
-              >
-                {item.name}
-              </Link>,
-            )}
-          </HeaderBottom>
+        <HeaderBottom>
+          {data.map(item =>
+            <Link
+              key={item.path}
+              to={item.path}
+            >
+              {item.name}
+            </Link>,
+          )}
+        </HeaderBottom>
 
       </CustomMainWrapper>
     </Wrapper>

@@ -31,10 +31,22 @@ export const initialState: AppState = {
     done: false,
     error: null,
   },
-  categories: {
-    data: ['See All'],
+  singleProduct:{
+    data:null,
     loading: false,
     done: false,
+    error: null,
+  },
+  categories: {
+    data: null,
+    loading: false,
+    done: false,
+    error: null,
+  },
+  bag: {
+    data:[],
+    done:false,
+    loading: false,
     error: null,
   },
 

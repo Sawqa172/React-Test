@@ -1,11 +1,12 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import jwtDecode from 'jwt-decode';
 
-import { setAuthAccessToken, getContactsData } from './services';
+import { setAuthAccessToken, getContactsData, fetchSingleProduct, fetchCategoryProducts } from './services';
 import { actions as appActions } from './slice';
 import { actions as logoutActions } from 'store/modules/auth/logout/slice';
 // import { actions } from './static/home/slice';
 import axios from 'axios';
+import { log } from 'util';
 
 
 
@@ -62,9 +63,10 @@ export function* fetchAsideCategoriesSaga() {
     yield put(appActions.fetchAsideCategoriesSuccess(data));
     } catch (err) {
       yield put(appActions.fetchAsideCategoriesFailed(err));
-    } finally {
-      yield put(appActions.fetchAsideCategoriesFulfilled());
     }
+    // finally {
+    //   yield put(appActions.fetchAsideCategoriesFulfilled());
+    // }
 
 }
 
@@ -79,8 +81,62 @@ export function* fetchAllProductsSaga() {
     yield put(appActions.fetchAllProductsSuccess(data));
   } catch (err) {
     yield put(appActions.fetchAllProductsFailed(err));
+  }
+  // finally {
+  //   yield put(appActions.fetchAllProductsFulfilled());
+  // }
+
+}
+
+export function* fetchCategoryAllProductsSaga(that) {
+
+  try {
+    const data = yield call(fetchCategoryProducts,that.payload);
+
+    yield put(appActions.fetchCategoryAllProductsSuccess(data));
+  } catch (err) {
+    yield put(appActions.fetchCategoryAllProductsFailed(err));
+  }
+  // finally {
+  //   yield put(appActions.fetchAllProductsFulfilled());
+  // }
+
+}
+
+export function* fetchSingleProductSaga(param) {
+  try {
+    const data  = yield call(fetchSingleProduct, param);
+
+    yield put(appActions.fetchSingleProductSuccess(data));
+  } catch (err) {
+    yield put(appActions.fetchSingleProductFailed(err));
   } finally {
-    yield put(appActions.fetchAllProductsFulfilled());
+    yield put(appActions.fetchSingleProductFulfilled());
+  }
+
+}
+//bag
+export function* bagSaga(that) {
+  try {
+    yield put(appActions.setBagSuccess(that.payload));
+  } catch (err) {
+    yield put(appActions.setBagFailed(err));
+  } finally {
+    yield put(appActions.setBagFulfilled());
+    // yield
+  }
+
+}
+
+//update bag
+export function* updateBagSaga(that) {
+  try {
+    yield put(appActions.updateBagSuccess(that.payload));
+  } catch (err) {
+    yield put(appActions.updateBagFailed(err));
+  } finally {
+    yield put(appActions.updateBagFulfilled());
+    // yield
   }
 
 }
@@ -97,5 +153,9 @@ export function* appSaga() {
   );
   yield takeLatest(appActions.fetchAsideCategoriesTrigger,fetchAsideCategoriesSaga);
   yield takeLatest(appActions.fetchAllProductsTrigger,fetchAllProductsSaga);
+  yield takeLatest(appActions.fetchSingleProductTrigger,fetchSingleProductSaga);
+  yield takeLatest(appActions.setBagTrigger,bagSaga);
+  yield takeLatest(appActions.updateBagTrigger,updateBagSaga);
+  yield takeLatest(appActions.fetchCategoryAllProductsTrigger,fetchCategoryAllProductsSaga);
 
 }

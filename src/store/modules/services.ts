@@ -1,4 +1,6 @@
 import { $apiClient } from 'utils/request';
+import axios from 'axios';
+import { FetchSingleProductTriggerPayload } from './types';
 
 export function setAuthAccessToken(token) {
   localStorage.setItem('access_token', token);
@@ -21,4 +23,11 @@ export function getContactsData() {
   const url = 'api/v1/variables';
 
   return $apiClient.get(url);
+}
+
+export  function fetchSingleProduct (param :FetchSingleProductTriggerPayload)  {
+  return  $apiClient.get(`/products/${param.payload}`)
+}
+ export  async function fetchCategoryProducts (param :FetchSingleProductTriggerPayload)  {
+  return  await $apiClient.get(`/products/category/${param}`)
 }

@@ -26,8 +26,15 @@ const HeaderTop = styled.div`
   
 `;
 const HeaderTopInteraction = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
+  &.header__bag_opened{
+    .header__bag-container{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 
   button {
     padding: 0;
@@ -35,6 +42,31 @@ const HeaderTopInteraction = styled.div`
     border: none;
     cursor: pointer;
 
+  }
+  .header__bag-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 300px;
+    height: 150px;
+    max-height: 150px;
+    background-color:#fff;
+    z-index: 2;
+    overflow-y: auto;
+    transition: .3s linear;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid #000;
+    border-radius: 5px;
+    span{
+      text-align:left;
+      &:not(:last-child){
+        margin-bottom: 15px;
+      }
+    }
   }
 `;
 
@@ -44,6 +76,7 @@ const HeaderTopButton = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+  
   &:hover {
     svg {
       fill: ${p => p.theme.colors.mainRed};
@@ -56,7 +89,7 @@ const HeaderTopButton = styled.button`
   svg {
     transition: .3s linear;
   }
-  span{
+  span.header__quantity{
     position: absolute;
     display: flex;
     align-items: center;
@@ -70,7 +103,7 @@ const HeaderTopButton = styled.button`
     bottom: -4px;
     right: -4px;
   }
-  
+ 
 `;
 
 
