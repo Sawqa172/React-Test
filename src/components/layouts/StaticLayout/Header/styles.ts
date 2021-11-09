@@ -8,7 +8,7 @@ const Wrapper = styled.header`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 15px 0;
+  padding: 20px 0 0;
   position: relative;
   width: 100%;
   background-color: ${p => p.theme.colors.mainWhite};
@@ -23,6 +23,9 @@ const HeaderTop = styled.div`
   flex-direction: row;
   width: 100%;
   margin-bottom: 20px;
+  // ${media.xsmall`
+  //   flex-direction:column;
+  // `}
   
 `;
 const HeaderTopInteraction = styled.div`
@@ -82,7 +85,7 @@ const HeaderTopButton = styled.button`
       fill: ${p => p.theme.colors.mainRed};
     }
   }
-  &:not(:last-child) {
+  &:not(:last-of-type) {
     margin-right: 20px;
   }
 
@@ -118,12 +121,16 @@ const HeaderBottom = styled.div`
     color: #000;
     transition: .3s linear;
     font-family: ${p =>p.theme.fontFamily.SourceSansProRegular};
-    // &:hover{
-    //   color: ${p => p.theme.colors.mainRed};
-    // }
+    
     &:not(:last-child){
       margin-right: 35px;
     }
+    ${media.xsmall`
+    font-size:14px;
+      &:not(:last-child){
+      margin-right: 15px;
+    }
+    `}
   }
   
 `;

@@ -7,10 +7,9 @@ import FooterContacts from '../FooterContacts';
 const Wrapper = styled.footer`
   display: flex;
   flex-direction: column;
-
-  //padding: 20px;
   background-color: #000;
   min-height: 240px;
+  height: auto;
 
 `;
 
@@ -57,7 +56,6 @@ const RightSide = styled.div`
 const FooterTop = styled.div`
   display: flex;
   align-items: center;
-
   flex-grow: 1;
   width: 100%;
 `;
@@ -67,11 +65,17 @@ const FooterTopContent = styled.div`
   align-items: center;
   flex-direction: row;
   width: 100%;
+  ${media.small`
+    flex-direction:column;
+    align-items:center;
+  `}
 `;
 
 const FooterTopNav = styled.nav`
-
   display: flex;
+  ${media.small`
+    margin-bottom:25px;
+  `}
   a{
     color: ${p => p.theme.colors.mainWhite};
     font-family: ${p => p.theme.fontFamily.SourceSansProRegular};
@@ -79,12 +83,19 @@ const FooterTopNav = styled.nav`
     &:not(:last-child){
       margin-right: 35px;
     }
+    ${media.xsmall`
+      font-size:14px;
+      &:not(:last-child){
+        margin-right: 15px;
+    }
+  `}
   }
 `;
 
 
 const FooterTopSocial = styled.div`
   display: flex;
+  
   a{
     
     &:not(:last-child){
@@ -112,6 +123,10 @@ const Logo = styled.a`
   font-size: 54px;
   color: ${p => p.theme.colors.mainWhite};
   font-family: ${p => p.theme.fontFamily.RomanescoRegular};
+  ${media.small`
+    margin-bottom:15px;
+  `}
+
 `;
 
 const Copyright = styled.small`

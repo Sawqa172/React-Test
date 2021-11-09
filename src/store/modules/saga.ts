@@ -1,7 +1,14 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import jwtDecode from 'jwt-decode';
 
-import { setAuthAccessToken, getContactsData, fetchSingleProduct, fetchCategoryProducts } from './services';
+import {
+  setAuthAccessToken,
+  getContactsData,
+  fetchSingleProduct,
+  fetchCategoryProducts,
+  fetchAllProducts,
+  fetchAsideCategories,
+} from './services';
 import { actions as appActions } from './slice';
 import { actions as logoutActions } from 'store/modules/auth/logout/slice';
 // import { actions } from './static/home/slice';
@@ -54,11 +61,9 @@ export function* fetchContactsDataSaga() {
 //FetchAsideCategories
 
 export function* fetchAsideCategoriesSaga() {
-  const fetchAsideCategories = () => {
-    return axios.get('https://fakestoreapi.com/products/categories')
-  }
+
   try {
-    const { data } = yield call(fetchAsideCategories);
+    const  data = yield call(fetchAsideCategories);
 
     yield put(appActions.fetchAsideCategoriesSuccess(data));
     } catch (err) {
@@ -72,12 +77,8 @@ export function* fetchAsideCategoriesSaga() {
 
 //FetchAllProducts
 export function* fetchAllProductsSaga() {
-  const fetchAllProducts = () => {
-    return axios.get('https://fakestoreapi.com/products?limit=10')
-  }
   try {
-    const { data } = yield call(fetchAllProducts);
-
+    const data  = yield call(fetchAllProducts);
     yield put(appActions.fetchAllProductsSuccess(data));
   } catch (err) {
     yield put(appActions.fetchAllProductsFailed(err));

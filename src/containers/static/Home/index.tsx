@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactDOM from 'react-dom';
 
-// context
+
 
 // locales
 import { useTranslation } from 'react-i18next';
@@ -12,7 +12,7 @@ import { translations } from 'locales/translations';
 // store
 import { useAppSlice } from '../../../store/modules/hook';
 import { selectLoading, homeCategories } from 'store/modules/static/home/selectors';
-import { selectAllProducts, selectCategories } from '../../../store/modules/selectors';
+import { isLoadingAllProducts, selectAllProducts, selectCategories } from '../../../store/modules/selectors';
 
 // components
 import HomeSEO from './SEO';
@@ -44,11 +44,15 @@ export function Home() {
   // locales hook
   const { t } = useTranslation();
 
-  //
+  // local state
   let [gridSwitcher, setGridSwitcher] = useState(`content__body-products_fourth`)
   let [activeButton, setActiveButton] = useState()
+
+  //selectors
+  const allProducts = useSelector(selectAllProducts);
+  const isAllProductLoading = useSelector(isLoadingAllProducts)
   // dispatch
-    const allProducts = useSelector(selectAllProducts);
+
   const dispatch = useDispatch();
 
   const getCategories = () => dispatch(actions.fetchAsideCategoriesTrigger());
@@ -82,11 +86,7 @@ export function Home() {
 
 
   };
-  let qwerty =[
-    {id:"grid_one",className:"grid_one",span:1,},
-    {id:"grid_two",className:"grid_two",span:2,},
-    {id:"grid_fourth",className:"grid_fourth",span:4,},
-  ]
+
 
   // render
   return (
@@ -130,8 +130,8 @@ export function Home() {
             </CustomAside>
             <ContentBodyProducts className={gridSwitcher}>
               {
-                allProducts
-                  ? allProducts.map(item =>
+                isAllProductLoading
+                  ? allProducts?.map(item =>
                     <SingleProduct key={item.id} className={'content__body-products_item'}>
 
                       <div className={'single-product__image'}>

@@ -1,4 +1,6 @@
 import styled from 'styled-components/macro';
+import { media } from 'styles/media';
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,6 +11,11 @@ const SingleProductContainer = styled.div`
   display: flex;
   width: 100%;
   height: auto;
+  ${media.small`
+    flex-direction:column;
+    align-items:center;
+  `}
+
 `;
 
 
@@ -19,6 +26,20 @@ const SingleProductLeft = styled.div`
   height: auto;
   max-height: 620px;
   margin-right: 30px;
+  ${media.large`
+    min-width:330px;
+    width:330px;
+  `}
+  ${media.medium`
+    min-width:220px;
+    width:220px;
+  `}
+  ${media.small`
+    margin-right:0;
+    margin-bottom:40px;
+  `}
+
+
 
   img {
     width: 100%;
@@ -30,6 +51,10 @@ const SingleProductLeft = styled.div`
 const SingleProductRight = styled.div`
   display: flex;
   flex-direction: column;
+  ${media.small`
+    width:100%;
+  `}
+
 `;
 
 const SingleProductRightTitle = styled.h1`
@@ -65,6 +90,17 @@ const SingleProductRightDescription = styled.div`
 const SingleProductRightButtons = styled.div`
   display: flex;
   width: 100%;
+  ${media.medium`
+    flex-direction:column;
+  `}
+  ${media.small`
+    flex-direction:row;
+  `}
+  ${media.xsmall`
+      flex-direction:column;
+  `}
+
+
 
   button {
     padding: 0;
@@ -76,6 +112,13 @@ const SingleProductRightButtons = styled.div`
     justify-content: center;
     cursor:pointer;
     transition: .3s linear;
+    ${media.small`
+      width:250px;
+    `}
+    ${media.xsmall`
+      width:290px;
+    `}
+
 
     span {
       font-size: 16px;
@@ -93,6 +136,12 @@ const SingleProductRightButtonsBuy = styled.button`
   background-color: #333;
   border: 1px solid transparent;
   margin: 0;
+  ${media.medium`
+      margin-bottom:30px;
+  `}
+  
+
+
   &:hover{
     background-color: ${ p => p.theme.colors.mainRed};
   }
@@ -107,6 +156,19 @@ const SingleProductRightButtonsQuickBuy = styled.button`
   background-color: transparent;
   margin: 0 0 0 auto;
   border: 1px solid #333;
+  ${media.medium`
+      margin:0;
+  `}
+  ${media.small`
+    margin: 0 0 0 auto;
+
+  `}
+  
+  ${media.xsmall`
+      margin:0;
+  `}
+
+
   &:hover{
     background-color: #333;
     span{

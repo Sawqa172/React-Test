@@ -18,8 +18,9 @@ import {
 
 // Update your breakpoints if you want
 export const sizes = {
-  xxsmall: 375,
-  xsmall: 480,
+  xxxsmall: 413,
+  xxsmall: 480,
+  xsmall: 576,
   small: 768,
   medium: 1024,
   large: 1440,
@@ -31,7 +32,7 @@ export const sizes = {
 export const media = (Object.keys(sizes) as Array<keyof typeof sizes>).reduce(
   (acc, label) => {
     acc[label] = (first: any, ...interpolations: any[]) => css`
-      @media (min-width: ${sizes[label]}px) {
+      @media (max-width: ${sizes[label]}px) {
         ${css(first, ...interpolations)}
       }
     `;

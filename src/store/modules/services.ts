@@ -21,10 +21,17 @@ export function setHasBeenAlreadyAuthBefore() {
 }
 export function getContactsData() {
   const url = 'api/v1/variables';
-
   return $apiClient.get(url);
 }
 
+
+
+export  function fetchAsideCategories ()  {
+  return  $apiClient.get(`/products/categories`)
+}
+export  function fetchAllProducts ()  {
+  return  $apiClient.get(`/products?limit=10`)
+}
 export  function fetchSingleProduct (param :FetchSingleProductTriggerPayload)  {
   return  $apiClient.get(`/products/${param.payload}`)
 }
