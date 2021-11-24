@@ -9,7 +9,7 @@ import {
   setBagTriggerPayload,
 } from './types';
 import {IProducts} from 'types/models/products'
-import { FetchTriggerPayload } from './auth/login/types';
+
 
 
 const appSlice = createSlice({

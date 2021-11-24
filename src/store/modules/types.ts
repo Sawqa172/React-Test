@@ -1,5 +1,5 @@
 import { Home } from '../../types/models/home';
-import {IProducts , ISingleProduct} from 'types/models/products'
+import {IProducts } from 'types/models/products'
 
 
 /**
@@ -54,7 +54,7 @@ export interface IProductsState {
   error?: unknown | null;
 }
 export interface ISingleProductState {
-  data: ISingleProduct | null,
+  data: IProducts | null,
   loading: boolean;
   done: boolean;
   error?: unknown | null;

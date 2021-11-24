@@ -15,10 +15,6 @@ import {
   AxiosResponse,
   AxiosError,
 } from 'axios';
-
-// actions
-import { actions as logoutActions } from 'store/modules/auth/logout/slice';
-
 // hook
 const useHttpClient = (
   httpClientInstance: AxiosInstance,
@@ -31,7 +27,7 @@ const useHttpClient = (
 
   // actions
   const dispatch = useDispatch();
-  const onLogout = () => dispatch(logoutActions.fetchDataTrigger());
+  // const onLogout = () => dispatch(logoutActions.fetchDataTrigger());
 
   // request interceptor
   const reqInterceptor = httpClientInstance.interceptors.request.use(
@@ -93,7 +89,6 @@ const useHttpClient = (
         // errors handling
         switch (err.response.status) {
           case 401:
-            onLogout();
             break;
 
           case 500:

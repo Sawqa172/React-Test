@@ -10,7 +10,7 @@ import {
   fetchAsideCategories,
 } from './services';
 import { actions as appActions } from './slice';
-import { actions as logoutActions } from 'store/modules/auth/logout/slice';
+
 // import { actions } from './static/home/slice';
 import axios from 'axios';
 import { log } from 'util';
@@ -19,29 +19,29 @@ import { log } from 'util';
 
 
 // auth check state
-export function* autoLoginSaga() {
-  const token = yield localStorage.getItem('access_token');
-
-  if (token) {
-    const decodedInfo = jwtDecode(token);
-    const currentTime = Date.now() / 1000;
-
-    // @ts-ignore
-    console.log(decodedInfo.exp);
-    console.log(currentTime);
-
-    // @ts-ignore
-    if (decodedInfo?.exp > currentTime) {
-      yield call(setAuthAccessToken, token);
-      yield put(appActions.autoLoginSetToken({ token }));
-    } else {
-      yield put(logoutActions.fetchDataTrigger());
-    }
-  } else {
-    yield put(appActions.autoLoginRestrictToken());
-    yield put(logoutActions.fetchDataTrigger());
-  }
-}
+// export function* autoLoginSaga() {
+//   const token = yield localStorage.getItem('access_token');
+//
+//   if (token) {
+//     const decodedInfo = jwtDecode(token);
+//     const currentTime = Date.now() / 1000;
+//
+//     // @ts-ignore
+//     console.log(decodedInfo.exp);
+//     console.log(currentTime);
+//
+//     // @ts-ignore
+//     if (decodedInfo?.exp > currentTime) {
+//       yield call(setAuthAccessToken, token);
+//       yield put(appActions.autoLoginSetToken({ token }));
+//     } else {
+//       yield put(logoutActions.fetchDataTrigger());
+//     }
+//   } else {
+//     yield put(appActions.autoLoginRestrictToken());
+//     yield put(logoutActions.fetchDataTrigger());
+//   }
+// }
 
 
 
@@ -147,7 +147,7 @@ export function* updateBagSaga(that) {
  * Root saga manages watcher lifecycle
  */
 export function* appSaga() {
-  yield takeLatest(appActions.autoLoginTrigger.type, autoLoginSaga);
+  // yield takeLatest(appActions.autoLoginTrigger.type, autoLoginSaga);
   yield takeLatest(
     appActions.fetchContactsDataTrigger.type,
     fetchContactsDataSaga,

@@ -14,13 +14,11 @@ import { useAppSlice } from '../../../store/modules/hook';
 import { selectLoading, homeCategories } from 'store/modules/static/home/selectors';
 import { isLoadingAllProducts, selectAllProducts, selectCategories } from '../../../store/modules/selectors';
 
-// components
-import HomeSEO from './SEO';
+
 
 // styles
 import {
   Wrapper,
-  EntrySection,
 } from './styles';
 import { CustomMainWrapper } from 'styles/custom-global-styles';
 
@@ -152,7 +150,7 @@ export function Home() {
                     </SingleProduct>,
                   )
                   :
-                  <span className={'is__loading__span'}>Товары загружаються</span>
+                  <Loader/>
               }
             </ContentBodyProducts>
           </ContentBodyContainer>
